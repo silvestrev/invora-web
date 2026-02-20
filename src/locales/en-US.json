@@ -1,0 +1,26 @@
+{
+  "login": {
+    "title": "Login first to your account",
+    "email": {
+      "label": "Email",
+      "placeholder": "name@email.com"
+    },
+    "password": {
+      "label": "Password",
+      "placeholder": "••••••••"
+    },
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot Password",
+    "button": "Login",
+    "noAccount": "Don't have an account? ",
+    "register": "Register Here"
+  },
+  "leftPanel": {
+    "title": "Empower your investment journey.",
+    "subtitle": "A simple and powerful platform to track, organize, and visualize your investments over time."
+  },
+  "mobileHeader": {
+    "title": "Empower your investment journey."
+  },
+  "copyright": "© 2026 Invora. All rights reserved."
+}

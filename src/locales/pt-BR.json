@@ -1,0 +1,26 @@
+{
+  "login": {
+    "title": "Faça login na sua conta",
+    "email": {
+      "label": "Email",
+      "placeholder": "nome@email.com"
+    },
+    "password": {
+      "label": "Senha",
+      "placeholder": "••••••••"
+    },
+    "rememberMe": "Lembrar de mim",
+    "forgotPassword": "Esqueceu a senha",
+    "button": "Entrar",
+    "noAccount": "Não tem uma conta? ",
+    "register": "Cadastre-se aqui"
+  },
+  "leftPanel": {
+    "title": "Potencialize sua jornada de investimentos.",
+    "subtitle": "Uma plataforma simples e poderosa para acompanhar, organizar e visualizar seus investimentos ao longo do tempo."
+  },
+  "mobileHeader": {
+    "title": "Potencialize sua jornada de investimentos."
+  },
+  "copyright": "© 2026 Invora. Todos os direitos reservados."
+}
