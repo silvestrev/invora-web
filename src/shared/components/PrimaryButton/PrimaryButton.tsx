@@ -1,8 +1,8 @@
 type PrimaryButtonProps = {
-  type?: 'submit' | 'button'
-  children: React.ReactNode
-  className?: string
-}
+  type?: 'submit' | 'button';
+  children: React.ReactNode;
+  className?: string;
+};
 
 export const PrimaryButton = ({
   type = 'submit',
@@ -16,5 +16,5 @@ export const PrimaryButton = ({
     >
       {children}
     </button>
-  )
-}
+  );
+};

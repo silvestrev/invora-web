@@ -1,16 +1,16 @@
-import { useState } from 'react'
-import { User, Lock, Eye, EyeOff } from 'lucide-react'
+import { useState } from 'react';
+import { User, Lock, Eye, EyeOff } from 'lucide-react';
 
 type TextInputProps = {
-  id: string
-  type: 'text' | 'email' | 'password'
-  label: string
-  placeholder: string
-  value: string
-  onChange: (value: string) => void
-  required?: boolean
-  showPasswordToggle?: boolean
-}
+  id: string;
+  type: 'text' | 'email' | 'password';
+  label: string;
+  placeholder: string;
+  value: string;
+  onChange: (value: string) => void;
+  required?: boolean;
+  showPasswordToggle?: boolean;
+};
 
 export const TextInput = ({
   id,
@@ -22,10 +22,10 @@ export const TextInput = ({
   required = true,
   showPasswordToggle = false,
 }: TextInputProps) => {
-  const [showPassword, setShowPassword] = useState(false)
-  const isPassword = type === 'password'
-  const inputType = isPassword && showPasswordToggle && showPassword ? 'text' : type
-  const showToggle = isPassword && showPasswordToggle
+  const [showPassword, setShowPassword] = useState(false);
+  const isPassword = type === 'password';
+  const inputType = isPassword && showPasswordToggle && showPassword ? 'text' : type;
+  const showToggle = isPassword && showPasswordToggle;
 
   return (
     <div>
@@ -64,5 +64,5 @@ export const TextInput = ({
         )}
       </div>
     </div>
-  )
-}
+  );
+};

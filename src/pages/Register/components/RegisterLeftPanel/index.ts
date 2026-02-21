@@ -1,1 +1,1 @@
-export { default } from './RegisterLeftPanel'
+export { default } from './RegisterLeftPanel';

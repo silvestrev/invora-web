@@ -1,7 +1,7 @@
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next';
 
 const LoginLeftPanel = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <div className="hidden lg:flex lg:w-1/2 bg-[#1A1C1E] flex-col p-12">
@@ -14,7 +14,7 @@ const LoginLeftPanel = () => {
         <p className="text-gray-400 text-lg leading-relaxed">{t('leftPanel.subtitle')}</p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default LoginLeftPanel
+export default LoginLeftPanel;

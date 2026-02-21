@@ -1,21 +1,21 @@
-import { useState, type SubmitEvent } from 'react'
-import { useTranslation } from 'react-i18next'
-import { useNavigate } from 'react-router-dom'
-import LanguageSelector from '../../../../shared/components/LanguageSelector'
-import { TextInput } from '../../../../shared/components/TextInput'
-import { PrimaryButton } from '../../../../shared/components/PrimaryButton'
+﻿import { useState, type SubmitEvent } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
+import LanguageSelector from '../../../../shared/components/LanguageSelector';
+import { TextInput } from '../../../../shared/components/TextInput';
+import { PrimaryButton } from '../../../../shared/components/PrimaryButton';
 
 const LoginForm = () => {
-  const { t } = useTranslation()
-  const navigate = useNavigate()
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [rememberMe, setRememberMe] = useState(false)
+  const { t } = useTranslation();
+  const navigate = useNavigate();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [rememberMe, setRememberMe] = useState(false);
 
   const handleSubmit = (e: SubmitEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    console.log({ email, password, rememberMe })
-  }
+    e.preventDefault();
+    console.log({ email, password, rememberMe });
+  };
 
   return (
     <div className="flex-1 flex flex-col bg-white p-4 md:p-8 relative">
@@ -93,7 +93,7 @@ const LoginForm = () => {
 
       <p className="text-center text-gray-500 text-xs pb-2">{t('copyright')}</p>
     </div>
-  )
-}
+  );
+};
 
-export default LoginForm
+export default LoginForm;

@@ -1,17 +1,17 @@
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next';
 
 const languages = [
   { code: 'pt-BR', label: 'PT-BR' },
   { code: 'en-US', label: 'EN' },
-]
+];
 
 const LanguageSelector = () => {
-  const { i18n } = useTranslation()
+  const { i18n } = useTranslation();
 
   return (
     <div className="flex items-center">
       {languages.map(({ code, label }, index) => {
-        const isActive = i18n.language === code
+        const isActive = i18n.language === code;
         return (
           <div key={code} className="flex items-center">
             {index > 0 && <span className="w-px h-4 bg-gray-500 mx-2" />}
@@ -23,10 +23,10 @@ const LanguageSelector = () => {
               {label}
             </button>
           </div>
-        )
+        );
       })}
     </div>
-  )
-}
+  );
+};
 
-export default LanguageSelector
+export default LanguageSelector;

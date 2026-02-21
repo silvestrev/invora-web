@@ -1,18 +1,18 @@
-import { useState } from 'react'
-import { useTranslation } from 'react-i18next'
-import { useNavigate } from 'react-router-dom'
-import { Eye, EyeOff, ArrowLeft } from 'lucide-react'
-import { PrimaryButton } from '../../../../shared/components/PrimaryButton'
-import LanguageSelector from '../../../../shared/components/LanguageSelector'
+import { useState, type SubmitEvent } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
+import { Eye, EyeOff, ArrowLeft } from 'lucide-react';
+import { PrimaryButton } from '../../../../shared/components/PrimaryButton';
+import LanguageSelector from '../../../../shared/components/LanguageSelector';
 
 type FieldProps = {
-  id: string
-  label: string
-  placeholder: string
-  value: string
-  onChange: (v: string) => void
-  type?: 'text' | 'email' | 'password'
-}
+  id: string;
+  label: string;
+  placeholder: string;
+  value: string;
+  onChange: (v: string) => void;
+  type?: 'text' | 'email' | 'password';
+};
 
 const RegisterField = ({
   id,
@@ -22,9 +22,9 @@ const RegisterField = ({
   onChange,
   type = 'text',
 }: FieldProps) => {
-  const [showPassword, setShowPassword] = useState(false)
-  const isPassword = type === 'password'
-  const inputType = isPassword && showPassword ? 'text' : type
+  const [showPassword, setShowPassword] = useState(false);
+  const isPassword = type === 'password';
+  const inputType = isPassword && showPassword ? 'text' : type;
 
   return (
     <div className="flex flex-col gap-0.5">
@@ -56,20 +56,20 @@ const RegisterField = ({
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
 const RegisterForm = () => {
-  const { t } = useTranslation()
-  const navigate = useNavigate()
-  const [fullName, setFullName] = useState('')
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const { t } = useTranslation();
+  const navigate = useNavigate();
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    console.log({ fullName, email, password })
-  }
+  const handleSubmit = (e: SubmitEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log({ fullName, email, password });
+  };
 
   return (
     <div className="flex-1 flex flex-col bg-[#f4f4f7] lg:bg-white p-4 md:p-8 relative">
@@ -145,7 +145,7 @@ const RegisterForm = () => {
 
       <p className="text-center text-gray-500 text-xs pb-2">{t('copyright')}</p>
     </div>
-  )
-}
+  );
+};
 
-export default RegisterForm
+export default RegisterForm;

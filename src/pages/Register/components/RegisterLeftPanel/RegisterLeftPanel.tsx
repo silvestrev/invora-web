@@ -1,7 +1,7 @@
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next';
 
 const RegisterLeftPanel = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <div className="hidden lg:flex lg:w-1/2 flex-col items-center justify-center min-h-screen bg-[#1a1c1e]">
@@ -12,7 +12,7 @@ const RegisterLeftPanel = () => {
         </p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default RegisterLeftPanel
+export default RegisterLeftPanel;

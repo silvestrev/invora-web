@@ -1,8 +1,8 @@
-import LanguageSelector from '../LanguageSelector'
+import LanguageSelector from '../LanguageSelector';
 
 type AuthMobileHeaderProps = {
-  subtitle: string
-}
+  subtitle: string;
+};
 
 const AuthMobileHeader = ({ subtitle }: AuthMobileHeaderProps) => {
   return (
@@ -15,7 +15,7 @@ const AuthMobileHeader = ({ subtitle }: AuthMobileHeaderProps) => {
         {subtitle}
       </h2>
     </div>
-  )
-}
+  );
+};
 
-export default AuthMobileHeader
+export default AuthMobileHeader;

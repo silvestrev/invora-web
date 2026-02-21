@@ -1,1 +1,1 @@
-export { default } from './AuthMobileHeader'
+export { default } from './AuthMobileHeader';
