@@ -49,7 +49,7 @@ const RegisterField = ({
             type="button"
             onClick={() => setShowPassword(!showPassword)}
             className="absolute inset-y-0 right-0 pr-5 flex items-center text-gray-400 hover:text-gray-600 cursor-pointer"
-            aria-label={showPassword ? 'Ocultar senha' : 'Mostrar senha'}
+            aria-label={showPassword ? 'Hide password' : 'Show password'}
           >
             {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
           </button>
@@ -83,7 +83,7 @@ const RegisterForm = () => {
             type="button"
             onClick={() => navigate('/login')}
             className="mb-6 flex items-center text-gray-700 hover:text-[#3DD598] transition-colors cursor-pointer"
-            aria-label="Voltar"
+            aria-label="Go back"
           >
             <ArrowLeft className="h-6 w-6" />
           </button>
