@@ -1,9 +1,10 @@
-import { useTranslation } from 'react-i18next'
-import LanguageSelector from '../../../../shared/components/LanguageSelector'
+import LanguageSelector from '../LanguageSelector'
 
-const RegisterMobileHeader = () => {
-  const { t } = useTranslation()
+type AuthMobileHeaderProps = {
+  subtitle: string
+}
 
+const AuthMobileHeader = ({ subtitle }: AuthMobileHeaderProps) => {
   return (
     <div className="lg:hidden bg-[#1a1c1e] px-6 py-8">
       <div className="flex items-center justify-between mb-4">
@@ -11,10 +12,10 @@ const RegisterMobileHeader = () => {
         <LanguageSelector />
       </div>
       <h2 className="text-white text-xl font-semibold leading-tight text-center">
-        {t('mobileHeader.title')}
+        {subtitle}
       </h2>
     </div>
   )
 }
 
-export default RegisterMobileHeader
+export default AuthMobileHeader
