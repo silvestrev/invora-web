@@ -2,19 +2,21 @@ import { render } from '@testing-library/react'
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { I18nextProvider } from 'react-i18next'
 import i18n from '../../../../../i18n'
-import LoginMobileHeader from '../LoginMobileHeader'
+import RegisterMobileHeader from '../RegisterMobileHeader'
 
-vi.mock('../../LanguageSelector', () => ({ default: () => null }))
+vi.mock('../../../../../shared/components/LanguageSelector', () => ({
+  default: () => null,
+}))
 
 beforeEach(async () => {
   await i18n.changeLanguage('en-US')
 })
 
-describe('LoginMobileHeader', () => {
+describe('RegisterMobileHeader', () => {
   const setup = () => {
     const renderResult = render(
       <I18nextProvider i18n={i18n}>
-        <LoginMobileHeader />
+        <RegisterMobileHeader />
       </I18nextProvider>,
     )
     return renderResult

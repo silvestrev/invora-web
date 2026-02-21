@@ -2,17 +2,17 @@ import { render } from '@testing-library/react'
 import { describe, it, expect, beforeEach } from 'vitest'
 import { I18nextProvider } from 'react-i18next'
 import i18n from '../../../../../i18n'
-import LoginLeftPanel from '../LoginLeftPanel'
+import RegisterLeftPanel from '../RegisterLeftPanel'
 
 beforeEach(async () => {
   await i18n.changeLanguage('en-US')
 })
 
-describe('LoginLeftPanel', () => {
+describe('RegisterLeftPanel', () => {
   const setup = () => {
     const renderResult = render(
       <I18nextProvider i18n={i18n}>
-        <LoginLeftPanel />
+        <RegisterLeftPanel />
       </I18nextProvider>,
     )
     return renderResult
@@ -23,13 +23,20 @@ describe('LoginLeftPanel', () => {
     expect(getByText('Invora')).toBeInTheDocument()
   })
 
-  it('should render the panel title', () => {
+  it('should render the subtitle in English', () => {
     const { getByText } = setup()
-    expect(getByText('Empower your investment journey.')).toBeInTheDocument()
+    expect(
+      getByText('Take control of your portfolio and make smart financial decisions.'),
+    ).toBeInTheDocument()
   })
 
-  it('should render the panel subtitle', () => {
+  it('should render the subtitle in Portuguese when language is pt-BR', async () => {
+    await i18n.changeLanguage('pt-BR')
     const { getByText } = setup()
-    expect(getByText(/track, organize, and visualize/i)).toBeInTheDocument()
+    expect(
+      getByText(
+        'Assuma o comando da sua carteira e tome decisões financeiras inteligentes.',
+      ),
+    ).toBeInTheDocument()
   })
 })
