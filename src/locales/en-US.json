@@ -15,6 +15,25 @@
     "noAccount": "Don't have an account? ",
     "register": "Register Here"
   },
+  "register": {
+    "title": "Create New Account",
+    "subtitle": "Please register by filling in your personal data",
+    "fullName": {
+      "label": "Full name",
+      "placeholder": "yourname"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "yourname@gmail.com"
+    },
+    "password": {
+      "label": "Password",
+      "placeholder": "••••••••"
+    },
+    "button": "Continue",
+    "hasAccount": "Already have an account? ",
+    "login": "Login"
+  },
   "leftPanel": {
     "title": "Empower your investment journey.",
     "subtitle": "A simple and powerful platform to track, organize, and visualize your investments over time."

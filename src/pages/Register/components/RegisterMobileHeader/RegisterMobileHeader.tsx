@@ -1,0 +1,20 @@
+import { useTranslation } from 'react-i18next'
+import LanguageSelector from '../../../../shared/components/LanguageSelector'
+
+const RegisterMobileHeader = () => {
+  const { t } = useTranslation()
+
+  return (
+    <div className="lg:hidden bg-[#1a1c1e] px-6 py-8">
+      <div className="flex items-center justify-between mb-4">
+        <h1 className="text-white text-2xl font-bold">Invora</h1>
+        <LanguageSelector />
+      </div>
+      <h2 className="text-white text-xl font-semibold leading-tight text-center">
+        {t('mobileHeader.title')}
+      </h2>
+    </div>
+  )
+}
+
+export default RegisterMobileHeader
