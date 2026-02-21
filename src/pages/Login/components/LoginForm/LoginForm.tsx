@@ -1,11 +1,13 @@
-﻿import { useState, type SubmitEvent } from 'react'
+import { useState, type SubmitEvent } from 'react'
 import { useTranslation } from 'react-i18next'
-import LanguageSelector from '../LanguageSelector'
+import { useNavigate } from 'react-router-dom'
+import LanguageSelector from '../../../../shared/components/LanguageSelector'
 import { TextInput } from '../../../../shared/components/TextInput'
 import { PrimaryButton } from '../../../../shared/components/PrimaryButton'
 
 const LoginForm = () => {
   const { t } = useTranslation()
+  const navigate = useNavigate()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [rememberMe, setRememberMe] = useState(false)
@@ -22,12 +24,12 @@ const LoginForm = () => {
       </div>
 
       <div className="flex-1 flex items-center justify-center">
-        <div className="w-full max-w-md bg-white lg:bg-transparent rounded-2xl lg:rounded-none shadow-lg lg:shadow-none p-8 lg:p-0">
-          <h2 className="text-gray-900 text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center pt-8 lg:pt-0">
+        <div className="w-full max-w-md bg-white lg:bg-transparent rounded-2xl lg:rounded-none shadow-lg lg:shadow-none p-10 lg:p-0">
+          <h2 className="text-gray-900 text-2xl md:text-3xl font-bold mb-8 md:mb-8 text-center pt-6 lg:pt-0">
             {t('login.title')}
           </h2>
 
-          <form onSubmit={handleSubmit} className="space-y-5 md:space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6 md:space-y-6">
             <TextInput
               id="email"
               type="email"
@@ -65,22 +67,25 @@ const LoginForm = () => {
               </div>
               <a
                 href="#"
-                className="text-sm text-[#3DD598] hover:text-invora-primary-hover font-medium"
+                className="text-sm text-[#3DD598] hover:text-invora-primary-hover font-medium cursor-pointer"
               >
                 {t('login.forgotPassword')}
               </a>
             </div>
 
-            <PrimaryButton type="submit">{t('login.button')}</PrimaryButton>
+            <PrimaryButton type="submit" className="cursor-pointer">
+              {t('login.button')}
+            </PrimaryButton>
 
             <div className="text-center text-sm">
               <span className="text-gray-600">{t('login.noAccount')}</span>
-              <a
-                href="#"
-                className="text-[#3DD598] hover:text-invora-primary-hover font-semibold"
+              <button
+                type="button"
+                onClick={() => navigate('/register')}
+                className="text-[#3DD598] hover:text-invora-primary-hover font-semibold cursor-pointer"
               >
                 {t('login.register')}
-              </a>
+              </button>
             </div>
           </form>
         </div>

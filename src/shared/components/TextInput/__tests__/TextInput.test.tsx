@@ -85,7 +85,7 @@ describe('TextInput', () => {
         showPasswordToggle
       />,
     )
-    expect(getByRole('button', { name: /mostrar senha/i })).toBeInTheDocument()
+    expect(getByRole('button', { name: /show password/i })).toBeInTheDocument()
   })
 
   it('should not show the toggle button when showPasswordToggle is false', () => {
@@ -117,10 +117,10 @@ describe('TextInput', () => {
     const input = getByLabelText('Password')
     expect(input).toHaveAttribute('type', 'password')
 
-    await userEvent.click(getByRole('button', { name: /mostrar senha/i }))
+    await userEvent.click(getByRole('button', { name: /show password/i }))
     expect(input).toHaveAttribute('type', 'text')
 
-    await userEvent.click(getByRole('button', { name: /ocultar senha/i }))
+    await userEvent.click(getByRole('button', { name: /hide password/i }))
     expect(input).toHaveAttribute('type', 'password')
   })
 })

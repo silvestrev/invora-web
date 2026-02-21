@@ -15,9 +15,31 @@
     "noAccount": "Não tem uma conta? ",
     "register": "Cadastre-se aqui"
   },
+  "register": {
+    "title": "Criar nova conta",
+    "subtitle": "Preencha seus dados pessoais para se cadastrar",
+    "fullName": {
+      "label": "Nome completo",
+      "placeholder": "seunome"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "seunome@gmail.com"
+    },
+    "password": {
+      "label": "Senha",
+      "placeholder": "••••••••"
+    },
+    "button": "Continuar",
+    "hasAccount": "Já tem uma conta? ",
+    "login": "Entrar"
+  },
   "leftPanel": {
     "title": "Potencialize sua jornada de investimentos.",
     "subtitle": "Uma plataforma simples e poderosa para acompanhar, organizar e visualizar seus investimentos ao longo do tempo."
+  },
+  "registerLeftPanel": {
+    "subtitle": "Assuma o comando da sua carteira e tome decisões financeiras inteligentes."
   },
   "mobileHeader": {
     "title": "Potencialize sua jornada de investimentos."
